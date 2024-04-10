@@ -11,4 +11,12 @@
         });
  });
 
+ routes.get("/joaoLucas",(request, response) =>{
+        response.status(200).send({
+            id: 24,
+            nome: 'joão Lucas',
+            idade: 24
+        })
+ })
+
  module.exports = routes;

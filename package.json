@@ -2,15 +2,19 @@
   "name": "projeto_rest_api",
   "version": "1.0.0",
   "description": "API de tranferencias de dados ",
-  "main": "index.js",
+  "main": "api_Server.js",
   "scripts": {
+    "start": "nodemon",
+    "stop": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "modules": "^0.4.0",
-    "node": "^18.20.0"
+    "node": "^18.20.0",
+    "nodemon": "^3.1.0"
   }
 }
