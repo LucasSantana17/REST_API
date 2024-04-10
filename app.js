@@ -11,12 +11,6 @@ app.use("/user",(request, response, next) =>{
         response.status(200).send({
             nome: 'Lucas',
             idade: 24
-        },{
-            nome: 'Helena',
-            idade: 5
-        },{
-             nome: 'Arthur',
-             idade: 1
         })
 });
 
