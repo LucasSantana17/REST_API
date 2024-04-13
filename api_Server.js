@@ -6,4 +6,4 @@ const server = http.createServer(app);
 
  ServerRodando =_=>{console.log('Servidor Rodando...')};
 
- server.listen(PORT, ServerRodando());
+ server.listen(PORT, ServerRodando);

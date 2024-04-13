@@ -1,18 +1,21 @@
 
+function lerDadosDoFormulario() {
+    var formulario = document.getElementById("meuFormulario");
+  
+    formulario.addEventListener("submit", function (evento) {
+      evento.preventDefault();
+  
+      var nome = document.getElementById("nome").value;
+      var idade = document.getElementById("idade").value;
+  
+      var dados = {
+        nome: nome,
+        idade: idade,
+      };
+  
+      var jsonDados = JSON.stringify(dados);
 
-document.getElementById("Envio_cadastro").addEventListener('submit', (evento) => {
-    evento.preventDefault();
-
-    var Dados = new Dados(this);
-
-    var jsonDados = {};
-    Dados.forEach((valor, chave) => {
-        jsonDados[chave] = valor;
-    });
-
-    var envioJSON = JSON.stringify(jsonDados);
-
-    fetch('http://localhost:3000/criar', { method:'POST', headers:{'Content-Type':'application/json'}, body: envioJSON})
+    fetch('http://localhost:3000/cadastrobanco/criar', { method:'POST', headers:{'Content-Type':'application/json'}, body: jsonDados})
     .then(( response ) =>  {
         if(!response){
             console.log('Erro ao enviar dados.');
@@ -23,5 +26,11 @@ document.getElementById("Envio_cadastro").addEventListener('submit', (evento) =>
     }).catch(erro => {
         console.log('Error',erro);
     })
-
-});
+  
+      console.log("Dados do formulário:", jsonDados);
+  
+      formulario.reset();
+    });
+  }
+  
+  lerDadosDoFormulario();

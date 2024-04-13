@@ -27,7 +27,6 @@ cadastro_db.post('/criar', (request, response) => {
             console.log('Novo cadastro criado com sucesso!');
             response.status(200).json({ message: 'Cadastro criado com sucesso' });
         }
-   
     })
 });
 
