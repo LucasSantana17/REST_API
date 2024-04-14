@@ -4,19 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Cadastro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <form id="meuFormulario" action="envio_cadastro" method="post">
-    <label for="nome">Nome</label>
-    <input type="text" id="nome" name="nome"><br>
-    <label for="idade">Idade</label>
-    <input type="text" id="idade" name="idade"><br>
-    <button type="submit">Enviar</button>
-  </form>
-  <script src="./envio.js"></script>
+
+  <main>
+
+    <div class="interface">
+      <div class="flex">
+        <form id="meuFormulario" action="envio_cadastro" method="post">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome"><br>
+          <label for="idade">Idade</label>
+          <input type="text" id="idade" name="idade"><br>
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" name="cpf"><br>
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" name="cidade"><br>
+          <button type="submit" id="btn">Enviar</button>
+      </div>
+      </form>
+      <script src="./envio.js"></script>
+    </div>
+
+  </main>
+
 </body>
 
 </html>

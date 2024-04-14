@@ -7,10 +7,14 @@ function lerDadosDoFormulario() {
   
       var nome = document.getElementById("nome").value;
       var idade = document.getElementById("idade").value;
-  
+      var cpf = document.getElementById("cpf").value;
+      var cidade = document.getElementById("cidade").value;
+
       var dados = {
         nome: nome,
         idade: idade,
+        cpf: cpf,
+        cidade: cidade
       };
   
       var jsonDados = JSON.stringify(dados);

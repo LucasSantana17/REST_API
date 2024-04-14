@@ -14,23 +14,21 @@ cadastro_db.get('/banco', (request, response) => {
 
 // criando cadastro
 cadastro_db.post('/criar', (request, response) => {
-     const {nome, idade} = request.body;
+    const {nome, idade, cpf, cidade} = request.body;
 
-     const sql = 'INSERT INTO cliente (nome, idade) VALUES (?, ?)';
-  
-    conexao_db.query(sql,[nome, idade], (err, result) => {
-        
-        if(err){
-            console.log('Não foi possível criar um novo cadastro:', err);
-            response.status(500).json({ error: 'Ocorreu um erro ao criar o cadastro' });
-        }else{ 
-            console.log('Novo cadastro criado com sucesso!');
-            response.status(200).json({ message: 'Cadastro criado com sucesso' });
-        }
-    })
+    const sql = 'INSERT INTO cliente (nome, idade, cpf, cidade) VALUES (?, ?, ?, ?)';
+ 
+   conexao_db.query(sql, [nome, idade, cpf, cidade], (err) => {
+       
+       if(err){
+           console.log('Não foi possível criar um novo cadastro:', err);
+           response.status(500).json({ error: 'Ocorreu um erro ao criar o cadastro' });
+       } else { 
+           console.log('Novo cadastro criado com sucesso!');
+           response.status(200).json({ message: 'Cadastro criado com sucesso' });
+       }
+   });
 });
-
-
 
 module.exports = cadastro_db;
 
