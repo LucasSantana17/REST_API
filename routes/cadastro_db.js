@@ -30,6 +30,22 @@ cadastro_db.post('/criar', (request, response) => {
    });
 });
 
+cadastro_db.get('/consulta', (request, response) => {
+    const {id}= request.query;
+    
+    const sql = 'SELECT * FROM cliente WHERE id  = ?';
+
+    conexao_db.query(sql, [id], (err, resultado) => {
+        if(err){
+                console.log('Ocorreu um erro na cunsulta', err);
+        return response.status(500).json({err: 'Erro ao consultar'});
+        }else{
+                console.log('Consulta bem sucedida');
+           return response.json(resultado); 
+        }
+    });
+});
+
 module.exports = cadastro_db;
 
 
