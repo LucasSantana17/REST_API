@@ -18,7 +18,7 @@ main{
 .interface {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 200px;
     background-color: black;
 }
 
@@ -61,4 +61,44 @@ input{
     border-radius: 20px;
 
 }
+
+#resultado {
+    width: 50%;
+    height: 300px;
+    color: aqua;
+    background-color: aliceblue;
+
+}
+
+#retorno {
+     display: flex;
+     justify-content: space-around;
+     flex-direction: column-reverse;
+}
+
+#buscaBanco {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;  
+    gap: 20px;
+}
+
+#btn-busca {
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+
+#resultado {
+    color: aqua;
+    background-color: black;
+}
+#busca{
+    width: 200px;
+}
+
 
